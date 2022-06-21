@@ -2,14 +2,12 @@
 
 # General settings
 lang: en
-title: Inclusion jekyll theme
-email: mail@orlovmax.com
-author: Maxim Orlov
-description: "Responsive blog theme for jekyll website generator"
-keywords: "jekyll theme, jekyll template, responsive jekyll theme"
+title: DARK
+description: "DARK place"
+keywords: "dark, darky, dark13"
 
 # URL settings
-baseurl: "/jekyll-inclusion" # the subpath of your site, e.g. /blog/
+baseurl: "/dark-log" # the subpath of your site, e.g. /blog/
 url: "http://website-templates.github.io" # the base hostname & protocol for your site
 home-repo: "https://github.com/website-templates/jekyll-inclusion"
 
