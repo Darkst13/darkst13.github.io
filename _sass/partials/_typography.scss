@@ -1,0 +1,117 @@
+// Basic Typographic Defaults
+
+// set font sizes in percent on the root element
+
+html {
+  font-size: $base-font-size;
+  @media screen and (min-width: $screen-xs-min) {
+    font-size: $base-font-size * 1.2;
+  }
+  @media screen and (min-width: $screen-md-min) {
+    font-size: $base-font-size * 1.4;
+  }
+}
+
+
+// now we can specify a single font size in rem for each of our elements
+// the root breakpoints above will then scale all elements together
+
+body {
+  color: $text-color;
+  -webkit-text-stroke: 0.1px;
+  font-family: $base-font;
+  line-height: $base-line-height;
+  font-weight: $base-font-weight;
+  font-style: normal;
+	font-variant: normal;
+  font-size: 1.8rem; // this is equivalent to 16px
+}
+
+main > a {
+  position: relative;
+  font-family: $subfont;
+  text-decoration: none;
+  display: inline-block;
+  color: $link-color;
+  overflow: hidden;
+  background: linear-gradient(to left, $link-hover-color, $link-hover-color 50%, $link-color 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+  text-decoration: none; // text decorations are clipped in WebKit browsers
+  &:hover {
+    background-position: 0 100%;
+  }
+}
+
+a.dark{
+  font-family: 'Rubik Glitch', cursive;
+  color: black !important;
+  font-weight: bolder;
+  font-size: x-large ;
+}
+
+h1,h2,h3,h4,h5,h6,figure {
+  p + &,
+  figure + & {
+    padding-top: 2rem;
+  }
+}
+p,a,ul,li{
+  direction: rtl;
+  text-align: right;
+}
+
+
+p.intro {
+  font-size: 2.4rem;
+  direction: rtl;
+  color: lighten($text-color, 40%);
+  padding-bottom: 4rem;
+  @media screen and (min-width: $screen-sm-min) {
+    padding-bottom: 4rem;
+  }
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: $bold-font-weight;
+  line-height: $base-line-height / 1.3;
+  direction: rtl;
+  font-family: $subfont;
+}
+
+h2 {
+  font-size: 3.2rem;
+  padding-bottom: 4rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+
+code {
+  font-family: $code-font;
+  font-size: 1.2rem;
+  color: $text-color;
+}
+
+strong {
+  font-weight: $bold-font-weight;
+}
+
+small {
+	font-size: 1.2rem;
+}
+
+header > h1 {
+  -webkit-text-stroke: 0.1px;
+  line-height: $base-line-height;
+  font-weight: $base-font-weight;
+  @media screen and (min-width: $screen-sm-min) {
+    text-align: left;
+  }
+}

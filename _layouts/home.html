@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<h2 class="hover1" style="  font-size: 6rem; font-family: fonth3;
+margin:0 auto;
+cursor: pointer;
+padding: 11px .1em;">{{ page.title }}</h2>
+
+  {% include page-intro.html %}
+
+  {{ content }}
+  <div class="dots-bars-6"></div>
+  <section>
+
+    <h3>اخر المنشورات</h3>
+
+    <ul>
+      {% for post in site.posts limit:3 %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+
+  </section>

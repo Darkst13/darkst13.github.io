@@ -1,264 +1,91 @@
-# Jekyll blog theme
+# Jekyll Netlify Boilerplate
 
-Simple and nice blog theme based on Inclusion framework.
+*Note: Check out my [Eleventy Netlify Boilerplate](https://github.com/danurbanowicz/eleventy-netlify-boilerplate). It does pretty much the same as this project but uses the [Eleventy](https://www.11ty.io/) static site generator. It's fast, flexible and doesn't require Ruby.*
 
-Proudly built with [Jekyll](http://jekyllrb.com/) and [Grunt](http://gruntjs.com/), hosted on [Github](https://github.com).
-Compatible browsers: IE8+, Firefox, Chrome, Opera, Yandex.browser, Safari
+**A really simple Jekyll template for creating a fast, static website on Netlify with
+a continuous deployment workflow.**
 
-Check out [quick demo](http://website-templates.github.io/jekyll-inclusion/) of this theme
+🔥 **This project is featured on Netlify's official [template showcase](http://templates.netlify.com/template/jekyll-with-netlify-cms-boilerplate/) and blog: [The top 10 Static Site Generators to watch in 2018](http://templates.netlify.com/template/jekyll-with-netlify-cms-boilerplate/)** 🔥
 
----
+* Minimal styling, ready to make your own
+* Example blog posts, pages and contact form
+* Responsive CSS Grid layout with fallbacks for older browsers
+* Continuous Deployment workflow via Netlify and Github
+* Netlify CMS for managing content
+* Netlify Identity for authenticating users
+* Netlify Forms for processing your static HTML forms with reCAPTCHA
+* Optional Netlify `_redirects` and `_headers` files ready to use
+* Jekyll SASS pipeline
+* Minified HTML and CSS
 
-##Contents
-* [Requirements](#requirements)
-* [Structure](#structure)
-* [Development and blogging](#development-and-blogging)
-	- [Editorconfig](#editorconfig)
-	- [Grunt tasks](#grunt-tasks)
-	- [Data driven nav](#data-driven-nav)
-	- [Post creation](#post-creation)
-* [Changelog](#changelog)
-* [Credits](#credits)
-* [License](#license)
+Based on Netlify's [Jekyll + Netlify CMS](https://github.com/netlify-templates/jekyll-netlify-cms) starter template, head over there for more details on deployment and build settings or to get help with setting up Netlify.
 
-## Requirements:
+For help with templates, local development and other Jekyll related stuff, check out the excellent [Jekyll Docs](https://jekyllrb.com/docs/home/).
 
-- [Ruby](http://www.ruby-lang.org/)
-- [Node.js](http://nodejs.org/)
-- [Grunt](http://gruntjs.com/) (`npm install -g grunt-cli`)
-- [Bower](http://bower.io/) (`npm install -g bower`)
-- [Python](http://www.python.org/) with [pip](http://www.pip-installer.org/)
+## [View Demo](https://jekyll-netlify-boilerplate.netlify.com/)
 
-## Structure
-There are two branches: master branch and gh-pages. Master is a main develop branch.
-Project based on [Synteagle general project template](https://github.com/synteagle/se-general-template)
-```
-./
-├── .editorconfig
-├── Gruntfile.js
-├── package.json
-├── bower.json
-├── README.md
-├── CHANGELOG.md
-├── Rakefile
-├── Gemfile
-├── _config.yml
-├── post.sh
-├──grunt/                                      * grunt tasks
-|   ├── task.js
-│   └── aliases.yml 
-|
-├── dev/                                       * site source
-|   ├── coffee/                                * coffee scripts
-|	│   └── main/                              * main scripts
-|	│
-│   ├── images/                                * image sources
-|	│
-│   ├── jade/                                  * templates
-|	|	├── blocks/                            * blocks library
-|	│   |   └── block.jade
-|	│   ├── helpers/                           * helper mixins
-|	│   ├── vendor/                            * third-party code
-|	│   ├── layouts/                           * page layouts
-|	│   └── pages/                             * main pages templates
-|	│
-│   ├── js/                                    * compiled and source js
-|	|   ├── main/                              * main site scripts
-|	│   ├── ie/                                * ie compat scripts
-|	│   └── vendor/                            * vendor scripts
-|	│
-|	├── sass/                                  * sass preprocessor styles
-|	|	├── blocks/                            * blocks library
-|	│   |   └── block.sass
-|	│   ├── helpers/                           * mixins and vars
-|	│   ├── vendor/                            * third-party code
-|	│   └── screen.sass
-|	│
-│   ├── ruby/                                  * jekyll plugins
-|	│
-│   ├── helpers/                               * helper files
-|	│
-│   ├── fonts/                                 * font sources
-|	│
-│   └── devtools/                              * some dev tools
-│
-├── build/                                     * built source
-|	├── index.html
-|	├── _data/                                 * jekyll data (i18n, locales)
-|	|
-|	├── _drafts/                               * drafts
-|	|
-|	├── _layouts/                              * layouts for jekyll generation
-|	|
-|	├── _plugins/                              * jekyll plugins
-|	|
-|	├── _posts/                                * posts (*.md)
-|	|
-|	└── static/                                * static assets
-|		├── css/                               * minified styles
-|		|
-|		├── images/                            * minified images
-|		│
-|		├── js/                                * minified assembled js
-|		|
-|		└── fonts/                             * @font-face-ready webfonts
-│
-└── publ/                                      * generated website
-	├── _data/                                 * jekyll data (i18n, locales)
-	|
-	├── _drafts/                               * drafts
-	|
-	├── _posts/                                * posts (*.md)
-	|
-	└── static/                                * static assets
-		└── images/                            * post and pages images
+## Performance
 
+You can test the demo site's TTFB (Time To First Byte) at [testmysite.io](https://testmysite.io/5b50abe51f12b74b81dd5442/jekyll-netlify-boilerplate.netlify.com)
+
+## Getting started
+
+Simply click the deploy button to get your own copy of the repository deployed to Netlify:
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/danurbanowicz/jekyll-netlify-boilerplate&stack=cms)
+
+This will setup everything needed for running the CMS:
+
+* A new repository in your GitHub account with the code
+* Full Continuous Deployment to Netlify's global CDN network
+* Control users and access with Netlify Identity
+* Manage content with Netlify CMS
+
+### Setup authentication
+
+After deploying this project, Netlify Identity will add you as a CMS user and
+will email you an invite. It is not necessary to accept this invite if you wish
+to use an
+[OAuth provider](https://www.netlify.com/docs/identity/#external-provider-login)
+(e.g. Github) to manage authentication for your CMS.
+It is recommended to use this method of authentication as it removes the need
+for an email & password to log in to the CMS and is generally more secure. You
+will need to add an OAuth provider in your Netlify app settings under
+"Settings" > "Identity" > "External providers".
+
+Next, navigate to `/admin` on your site, choose your OAuth provider from the
+login box and you should then be logged into your CMS.
+
+Now you're all set, and you can start editing content!
+
+**Note:** if you switch the repo that was created to private, you'll need to regenerate your token,
+as the token generated using the deploy to Netlify button can only access public repositories. To
+regenerate your token, head to "Settings" in your Netlify site dashboard, go to the "Identity"
+section, then scroll to "Services" where you'll see an "Edit settings" button. Click that and you'll
+see a text link to "Generate access token in GitHub".
+
+## Local Development
+
+Clone this repository and run:
+
+```bash
+bundle install
+bundle exec jekyll server --watch
 ```
 
-Take a look at [this article](http://www.aymerick.com/2014/07/22/jekyll-github-pages-bower-bootstrap.html) about creating dev and deploy branches for your blog. 
+In case you don't want to install ruby-bundler you can use docker:
 
-NOTE: this example use in _config.yml use baseurl option, so after domain there is path: /jekyll-inclusion. If you want to run this example on the local machine you should comment or remove this line in _config.yml file.
-
-## Development and blogging
-
-### Editorconfig
-This project contains .editorconfig file. It describes codestyle like indentation, trailing whitespaces etc. See more details [here](http://editorconfig.org/) 
-
-### Grunt tasks
-Here comes groups of grunt tasks with some explanations
-
-#### Start 
-`grunt start` - Install bower dependencies and place them to dev folders
-```
-- 'shell:bower'                          Install bower components
-- 'bower:ie'                             Copy ie components to js folder
-- 'bower:vendor'                         Copy vendor  components to js folder
+```bash
+docker-compose up
 ```
 
-#### Dev
-`gulp dev` - Dev task with static server
-```
-- 'coffee:main'                          Compile main coffescripts
-- 'concat:main'                          Concatenate main javascripts
-- 'concat:ie'                            Concatenate ie javascripts
-- 'concat:vendor'                        Concatenate vendor javascripts
-- 'sass'                                 Compile Sass stylesheets
-- 'jade'                                 Compile Jade templates
-- 'sync:imagesDev'                       Sync images
-- 'sync:fontsDev'                        Sync fonts
-- 'sync:helpersDev'                      Sync helpers and other assets
-- 'sync:rubyDev'                         Sync jekyll plugins
-- 'sync:mainPubl'                        Sync posts and pages from publ folder
-- 'shell:jekyllBuild'                    Generate site using Jekyll.rb
-- 'browserSync:dev'                      Run dev server with watch option
-- 'watch:dev'                            Watch for changes and run dev task
-```
+Jekyll will watch your project folder for changes.
 
-#### Build 
-`grunt build` - Build task
-```
-- 'shell:jekyllBuild'                    Generate site using Jekyll.rb
-- 'imagemin'                             Minify images
-- 'cmq'                                  Combine media queries in css files
-- 'autoprefixer'                         Add vendor prefixes in css
-- 'csscomb'                              Applie styleguide to stylesheets
-- 'uglify'                               Minify javascript files
-- 'csso'                                 Minify stylesheets
-- 'processhtml'                          Replace assets paths in html
-- 'htmlmin'                              Minify html
-- 'clean:dev'                            Remove dev things
-- 'browserSync:test'                     Run test server without watch
-```
+Now navigate to [localhost:4000](http://localhost:4000/) to preview the site, and
+[localhost:4000/admin](http://localhost:4000/admin) to log into the CMS.
 
-#### Rebuild 
-`grunt rebuild` - Regenerate and build project by running all tasks
-```
-- 'coffee:main'                          Compile main coffescripts
-- 'concat:main'                          Concatenate main javascripts
-- 'concat:ie'                            Concatenate ie javascripts
-- 'concat:vendor'                        Concatenate vendor javascripts
-- 'sass'                                 Compile Sass stylesheets
-- 'jade'                                 Compile Jade templates
-- 'sync:imagesDev'                       Sync images
-- 'sync:fontsDev'                        Sync fonts
-- 'sync:helpersDev'                      Sync helpers and other assets
-- 'sync:rubyDev'                         Sync jekyll plugins
-- 'sync:mainPubl'                        Sync posts and pages from publ folder
-- 'shell:jekyllBuild'                    Generate site using Jekyll.rb
-- 'imagemin'                             Minify images
-- 'cmq'                                  Combine media queries in css files
-- 'autoprefixer'                         Add vendor prefixes in css
-- 'csscomb'                              Applie styleguide to stylesheets
-- 'uglify'                               Minify javascript files
-- 'csso'                                 Minify stylesheets
-- 'processhtml'                          Replace assets paths in html
-- 'htmlmin'                              Minify html
-- 'clean:dev'                            Remove dev things
-```
+## Bug reports, feature requests, etc
 
-#### Theme
-`grunt theme` - Theme styles and scripts fixing
-```
-- 'coffee:main'                          Compile main coffescripts
-- 'concat:main'                          Concatenate main javascripts
-- 'concat:ie'                            Concatenate ie javascripts
-- 'concat:vendor'                        Concatenate vendor javascripts
-- 'sass'                                 Compile Sass stylesheets
-- 'sync:cssTheme'                        Sync css with Jekyll generated assets
-- 'sync:jsTheme'                         Sync js with Jekyll generated assets
-- 'browserSync:theme'                    Run dev server with watch option
-- 'watch:theme'                          Watch for changes and run theme task
-```
+This is an ongoing project and I welcome contributions. Feel free to submit a PR.
 
-#### Template
-`grunt template` - Theme templates fixing
-```
-- 'jade'                                 Compile Jade templates
-- 'shell:jekyllBuild'                    Generate site using Jekyll.rb
-```
-
-#### Publish
-`grunt publish` - Copy posts, pages and images and generates website
-```
-- 'sync:mainPubl'                        Copy posts, pages and images
-- 'shell:jekyllBuild'                    Generate site using Jekyll.rb
-- 'processhtml'                          Replace assets paths in html
-- 'htmlmin'                              Minify html
-- 'clean:dev'                            Remove dev things
-```
-
-#### Deploy 
-`grunt deploy` - Deploy project by running Rakefile: git or ftp push
-```
-- 'shell:deploy'                         Deploy generated site to gh-pahes
-```
-
-#### Server 
-`grunt server` - Run server without watching for changes
-```
-- 'browserSync:test'                     Run test server without watch
-```
-
-### Data driven nav
-This theme use special data from _data/nav.yml to generate navigation. It's useful when you need to create nested menu. Also each page have menu option and if it will turn to true - this page will appear in menu.
-
-### Post creation
-There is a [simple bash script](https://gist.github.com/orlovmax/f1b73a5fd01fc4b917c2) that allows us to create new posts. I've put it in the root of the website, so just execute it, like `bash post.sh your-post-name` or `post.sh your-post-name` and it will create new *.md file at `_publ/pages/_posts` with predefined draft layout from `_draft` directory and also it will create folder in `_publ/img/posts/` with name `your-post-name` for your post images. It's pretty simple and useful.
-
-## Changelog
-Youc can find full changelog [HERE](https://github.com/website-templates/jekyll-inclusion/blob/master/CHANGELOG.md)
-
-## Credits
-* [JADE bemto mixin](https://github.com/kizu/bemto)
-* [Lazy load plugin](http://www.appelsiini.net/projects/lazyload)
-* [Intense Image Viewer](http://tholman.com/intense-images/)
-* [Prism syntax highlighter](http://prismjs.com/download.html) 
-* [Detect Mobile Browsers](http://detectmobilebrowsers.com/)
-* [Clean blog jekyll theme](https://github.com/IronSummitMedia/startbootstrap-clean-blog-jekyll)
-* [Strip.rb - strip newlines after for loop](https://github.com/aucor/jekyll-plugins)
-* [Tag pages generator](https://github.com/ilyakhokhryakov/jekyll-tagging-pagination)
-* [Tag and Category pages pagination](https://github.com/realjenius/realjenius.com/blob/master/_plugins/cat_and_tag_generator.rb)
-* [Jekyll i18n filter](https://github.com/gacha/gacha.id.lv/blob/master/_plugins/i18n_filter.rb)
-
-## License
-[MIT](http://opensource.org/licenses/MIT)
+If you need any help with setting up Netlify CMS, you can reach out to the Netlify team in the [Netlify CMS Gitter](https://gitter.im/netlify/netlifycms).

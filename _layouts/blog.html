@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<h2>{{ page.title }}</h2>
+
+{% include page-intro.html %}
+
+{{ content }}
+
+<section>
+
+  <h3 style="text-align: center;">المنشورات</h3>
+
+  <ul>
+    {% for post in site.posts %}
+    {% assign author = site.data.authors[post.author] %}
+      <li>
+        <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+        <time datetime="{{ post.date }}">
+          <small>
+            {% if author %}
+              by {{ author.name }}
+            {% endif %}
+          </small>
+        </time>
+        {{ post.excerpt | strip_newlines | truncate: 180 }}
+      </li>
+    {% endfor %}
+  </ul>
+
+</section>

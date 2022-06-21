@@ -1,0 +1,10 @@
+# specify main menu items here
+
+- text: الصفحة الرئيسية
+  url: /
+- text: معلومات
+  url: /about
+- text: دارك
+  url: /contact
+- text: اللائحة الداركية
+  url: /blog

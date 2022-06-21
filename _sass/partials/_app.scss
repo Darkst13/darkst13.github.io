@@ -1,0 +1,281 @@
+// Main Styles
+
+// See the other SASS partials for typography, variables etc.
+// CSS Grid is used for the layout with fallbacks for less capable browsers
+// declared beforehand, and a @supports feature query to reset fallbacks when
+// necessary. https://rachelandrew.co.uk/css/cheatsheets/grid-fallbacks
+
+// the body element is our primary layout grid
+body {
+  background-color: $backgrund-color;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns:
+    [full-start] minmax(1rem, 1fr)
+    [main-start] minmax(0, 52rem) [main-end]
+    minmax(1rem, 1fr) [full-end];
+}
+
+
+header,footer{
+  @media (max-width: 900px) {
+    align-self:stretch;
+    align-content: center;
+    height: fit-content;
+}
+}
+
+
+// by default, make any new children of body to span the full track
+body > * {
+  grid-column: full;
+  padding: 2rem 1rem;
+}
+
+// header, the first grid row
+// it is also a grid for the logo and nav
+header {
+  grid-column: full;
+  font-size: 1.2rem;
+  background: url("https://styles.redditmedia.com/t5_2qmjl/styles/bannerBackgroundImage_2qok6gpoiud71.png?width=4000&s=6b7f7b1846d648c37b4c12393a8ba2fe067300ca") no-repeat scroll center center / cover;
+  box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.75);
+  border-radius: 0 0 0 40px;
+  border-color: transparent;
+  display: grid;
+  background-color: $brand-color;
+  padding: 1.5rem;
+  @media screen and (min-width: $screen-sm-min) {
+    grid-template-columns: 1fr auto;
+    grid-column-gap: 1rem;
+    border-radius: 0px 0px 30px 30px;
+  }
+}
+header.nav, header.lu, header.li{
+  font-family: 'Reem Kufi', sans-serif;
+}
+// logo, is a grid item
+header > h1 {
+  display: inline-block;
+  padding-bottom: 1rem;
+  @media screen and (min-width: $screen-sm-min) {
+    padding-bottom: 0;
+  }
+  @media (max-width: 900px) {
+    align-self: center;
+    text-align: center;
+    font-size: x-large;
+  }
+}
+
+header,footer{
+  @media (max-width: 900px) {
+    align-self: stretch;
+  }
+}
+
+// main menu, is a grid item
+header > nav {
+  @media screen and (min-width: $screen-sm-min) {
+    float: right;
+  }
+  ul {
+    // flexbox is better than grid for distributing an unknown qty of children
+    display: flex;
+    li {
+      margin-right: 2rem;
+      display: inline-block;
+      @media screen and (min-width: $screen-sm-min) {
+        margin-right: 0;
+      }
+      a {
+        color: white !important;
+        border: 0;
+        @media screen and (min-width: $screen-sm-min) {
+          padding: 1rem;
+        }
+        &[data-current="current page"] {
+          // you can add an active nav item style here
+        }
+      }
+      a:hover {
+        color: rgb(233, 233, 233) !important;
+      }
+    }
+  }
+}
+
+// our main content wrapper, the width scales with font size
+main {
+  width: 100%;
+  max-width: 52rem;
+  margin-right: auto;
+  margin-left: auto;
+  grid-column: main;
+  display: grid;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  @media screen and (min-width: $screen-md-min) {
+    align-content: start;
+  }
+}
+
+// reset breaking fallbacks (e.g. widths) if CSS Grid is supported
+// float, inline-block, table properties are already ignored by CSS Grid
+@supports (display: grid) {
+  main {
+    width: auto;
+    max-width: none;
+  }
+}
+
+// blog posts list
+html[data-current="blog"] main > section {
+  ul li {
+    padding: 2rem 0;
+    border-bottom: 0.05em solid $hairline-color;
+    p {
+      padding-bottom: 0;
+    }
+  }
+}
+
+// adjacent blog posts links
+nav[aria-label="Adjacent Posts"] {
+  padding: 4rem 0;
+  ul {
+    display: flex;
+    li {
+      flex: 0 0 50%;
+      width: auto;
+      &:nth-child(2) {
+        text-align: right;
+      }
+    }
+  }
+}
+
+// contact form
+html[data-current="contact"] main > form {
+  display: grid;
+  label {
+    display: none;
+  }
+  input,
+  textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+  button {
+    width: 100%;
+  }
+}
+
+// reset CSS Grid fallbacks when they aren't required
+@supports (display: grid) {
+  html[data-current="contact"] main > form {
+    input,
+    textarea,
+    button {
+      width: auto;
+      max-width: none;
+    }
+  }
+}
+
+footer {
+  grid-column: full;
+  box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.75);
+  border-top-left-radius: 40px;
+  border-color: transparent;
+  bottom: 0%;
+  text-align: center;
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(1rem, 1fr)
+    [main-start] minmax(0, 50rem) [main-end]
+    minmax(1rem, 1fr) [full-end];
+  background-color: $grey-bg-color;
+  > small {
+    grid-column: main;
+  }
+}
+
+.dots-bars-6 {
+  width: 40px;
+  height: 20px;
+  left:50%;
+  --c:radial-gradient(farthest-side,currentColor 93%,#0000);
+  background:
+    var(--c) 0    0,
+    var(--c) 50%  0;
+  background-size:8px 8px;
+  background-repeat: no-repeat;
+  position: relative;
+  clip-path: inset(-200% -100% 0 0);
+  animation: db6-0 1.5s linear infinite;
+}
+.dots-bars-6:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 12px;
+  background:currentColor;
+  left:-16px;
+  top:0;
+  animation: 
+    db6-1 1.5s linear infinite,
+    db6-2 0.5s cubic-bezier(0,200,.8,200) infinite;
+}
+.dots-bars-6:after {
+  content: "";
+  position: absolute;
+  inset:0 0 auto auto;
+  width:8px;
+  height: 8px;
+  border-radius: 50%;
+  background:currentColor; 
+  animation: db6-3 1.5s  linear infinite;
+}
+
+@keyframes db6-0 {
+  0%,30%  {background-position: 0  0   ,50% 0   }
+  33%     {background-position: 0  100%,50% 0   }
+  41%,63% {background-position: 0  0   ,50% 0   }
+  66%     {background-position: 0  0   ,50% 100%}
+  74%,100%{background-position: 0  0   ,50% 0   }
+}
+
+@keyframes db6-1 {
+  90%  {transform:translateY(0)}
+  95%  {transform:translateY(15px)}
+  100% {transform:translateY(15px);left:calc(100% - 8px)}
+}
+
+@keyframes db6-2 {
+  100% {top:-0.1px}
+}
+
+@keyframes db6-3 {
+  0%,80%,100% {transform:translate(0)}
+  90%         {transform:translate(26px)}
+}
+
+.hover1 {
+  --b: 0.1em;   /* the thickness of the line */
+  --c: #8105D8; /* the color */
+  
+  color: #ffffffde;
+  padding-block: var(--b);
+  background: 
+    linear-gradient(var(--c) 50%,#000 0) 0% calc(100% - var(--_p,0%))/100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
+  -webkit-background-clip: text,padding-box;
+          background-clip: text,padding-box;
+  transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
+}
+.hover1:hover {
+  --_p: 100%;
+  --_s: .3s;
+}

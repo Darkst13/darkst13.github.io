@@ -1,5 +1,4 @@
-deploy
+_site
 .sass-cache
-
-/bower_components/
-/node_modules/
+.jekyll-metadata
+.users.yml
