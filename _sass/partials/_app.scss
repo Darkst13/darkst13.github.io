@@ -37,6 +37,8 @@ body > * {
 // it is also a grid for the logo and nav
 header {
   grid-column: full;
+  height: 80px!important;
+  position: fixed!important;
   font-size: 1.2rem;
   background: url("https://styles.redditmedia.com/t5_2qmjl/styles/bannerBackgroundImage_2qok6gpoiud71.png?width=4000&s=6b7f7b1846d648c37b4c12393a8ba2fe067300ca") no-repeat scroll center center / cover;
   box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.75);
