@@ -27,24 +27,6 @@ body {
   font-size: 1.8rem; // this is equivalent to 16px
 }
 
-header nav a{
-  font-family: $subfont;
-  text-decoration: none;
-  display: inline-block;
-  color: $link-color;
-  overflow: hidden;
-  background: linear-gradient(to left, $link-hover-color, $link-hover-color 50%, $link-color 50%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% 100%;
-  background-position: 100%;
-  transition: background-position 275ms ease;
-  text-decoration: none; // text decorations are clipped in WebKit browsers
-  &:hover {
-    background-position: 0 100%;
-  }
-}
 a {
   text-decoration: none;
   font-family: $subfont;
