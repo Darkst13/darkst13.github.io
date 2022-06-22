@@ -45,7 +45,19 @@ main a{
     background-position: 0 100%;
   }
 }
+header a:hover span {
+  animation: glitchText 0.4s linear;
+}
 
+header a::before {
+  height: 2px;
+  opacity: 0;
+}
+
+header a:hover::before {
+  opacity: 1;
+  animation: glitchLine 0.4s steps(2, start) forwards;
+}
 a.dark{
   font-family: 'Rubik Glitch', cursive;
   color: black !important;
