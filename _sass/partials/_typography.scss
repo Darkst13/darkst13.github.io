@@ -27,7 +27,7 @@ body {
   font-size: 1.8rem; // this is equivalent to 16px
 }
 
-main a{
+.nav{
   font-family: $subfont;
   text-decoration: none;
   display: initial;
@@ -45,16 +45,17 @@ main a{
     background-position: 0 100%;
   }
 }
-.nav:hover span {
+
+a:hover span {
   animation: glitchText 0.4s linear;
 }
 
-.nav::before {
+a::before {
   height: 2px;
   opacity: 0;
 }
 
-.nav:hover::before {
+a:hover::before {
   opacity: 1;
   animation: glitchLine 0.4s steps(2, start) forwards;
 }
