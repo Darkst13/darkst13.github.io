@@ -27,30 +27,25 @@ body {
   font-size: 1.8rem; // this is equivalent to 16px
 }
 
-a {
-  text-decoration: none;
+main a{
   font-family: $subfont;
-  color: #18272F;
-  font-weight: 700;
-  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  color: $link-color;
+  overflow: hidden;
+  background: linear-gradient(to left, $link-hover-color, $link-hover-color 50%, $link-color 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+  text-decoration: none; // text decorations are clipped in WebKit browsers
+  &:hover {
+    background-position: 0 100%;
+  }
 }
 
-a::before {
-  content: '';
-  background-color: hsla(196, 61%, 58%, .75);
-  position: absolute;
-  left: 0;
-  bottom: 3px;
-  width: 100%;
-  height: 8px;
-  z-index: -1;
-  transition: all .3s ease-in-out;
-}
-
-a:hover::before {
-  bottom: 0;
-  height: 100%;
-}
 a.dark{
   font-family: 'Rubik Glitch', cursive;
   color: black !important;
