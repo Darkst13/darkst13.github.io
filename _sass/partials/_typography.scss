@@ -27,7 +27,7 @@ body {
   font-size: 1.8rem; // this is equivalent to 16px
 }
 
-main a{
+main nav{
   position: relative;
   font-family: $subfont;
   text-decoration: none;
@@ -48,6 +48,7 @@ main a{
 }
 a {
   text-decoration: none;
+  font-family: $subfont;
   color: #18272F;
   font-weight: 700;
   position: relative;
