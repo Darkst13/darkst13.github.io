@@ -45,16 +45,16 @@ main a{
     background-position: 0 100%;
   }
 }
-header a:hover span {
+.nav:hover span {
   animation: glitchText 0.4s linear;
 }
 
-header a::before {
+.nav::before {
   height: 2px;
   opacity: 0;
 }
 
-header a:hover::before {
+.nav:hover::before {
   opacity: 1;
   animation: glitchLine 0.4s steps(2, start) forwards;
 }
