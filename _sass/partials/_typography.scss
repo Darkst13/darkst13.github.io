@@ -30,7 +30,7 @@ body {
 main a{
   font-family: $subfont;
   text-decoration: none;
-  display: inline-block;
+  display: initial;
   color: $link-color;
   overflow: hidden;
   background: linear-gradient(to left, $link-hover-color, $link-hover-color 50%, $link-color 50%);
