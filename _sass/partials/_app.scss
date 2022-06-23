@@ -409,14 +409,16 @@ footer {
 
 
 $color: #fd7000;
-$size: 12px;
+$size: 10px;
 $time: 1;
 
 .dank-ass-loader {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+  @media screen and (min-width:$screen-sm-min)  {
+    display: ruby;
+  }
   .row {
      display: flex;
   }
