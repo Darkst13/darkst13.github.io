@@ -193,7 +193,6 @@ main {
     transform: translate(-50%, -50%);
     margin: 50%;
 }  }
-}
 .arrow span{
   display: block;
   width: 30px;
@@ -322,7 +321,7 @@ footer {
 }
 
 .mobile-toggle ul{
-  width: auto;
+  width: -webkit-fill-available;
 }
 .mobile-toggle ul, .mobile-toggle li, .mobile-toggle a {
     text-align: center;
