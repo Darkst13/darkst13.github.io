@@ -18,7 +18,7 @@ body {
 }
 
 
-header,footer{
+footer{
   @media (max-width: 900px) {
     align-self:stretch;
     align-content: center;
@@ -35,22 +35,8 @@ body > * {
 
 // header, the first grid row
 // it is also a grid for the logo and nav
-header {
-  grid-column: full;
-  font-size: 1.2rem;
-  background: url("https://styles.redditmedia.com/t5_2qmjl/styles/bannerBackgroundImage_2qok6gpoiud71.png?width=4000&s=6b7f7b1846d648c37b4c12393a8ba2fe067300ca") no-repeat scroll center center / cover;
-  box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.75);
-  border-radius: 0 0 0 40px;
-  border-color: transparent;
-  display: grid;
-  background-color: $brand-color;
-  padding: 1.5rem;
-  @media screen and (min-width: $screen-sm-min) {
-    grid-template-columns: 1fr auto;
-    grid-column-gap: 1rem;
-    border-radius: 0px 0px 30px 30px;
-  }
-}
+
+
 header.nav, header.lu, header.li{
   font-family: 'Reem Kufi', sans-serif;
 }
