@@ -61,14 +61,6 @@ body > * {
   }
 }
 
-.open-nav {
-  max-height: 400px !important;
-}
-.open-nav .mobile-toggle {
-  transform: rotate(-90deg);
-  -webkit-transform: rotate(-90deg);
-}
-
 .sticky {
   background-color: $brand-color;
   opacity: 1;
