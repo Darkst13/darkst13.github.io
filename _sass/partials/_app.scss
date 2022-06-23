@@ -177,6 +177,7 @@ main {
   border-bottom: 2px solid #e8f380;
   padding-bottom: 12px;
   line-height: 3;
+  width: auto;
 }
 
 .mouse {
@@ -398,6 +399,7 @@ footer {
 .mobile-toggle ul{
   width: auto;
 }
-.mobile-toggle{
-  text-align: center;
+.mobile-toggle ul, .mobile-toggle li, .mobile-toggle a {
+    text-align: center;
+        color: white;
 }
