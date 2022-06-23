@@ -138,31 +138,12 @@ nav ul a {
   font-size: 20px;
 }
 
-.mobile-toggle {
-  display: none;
-  cursor: pointer;
-  font-size: 20px;
-  position: absolute;
-  right: 22px;
-  top: 25%;
-  width: 30px;
-  -webkit-transition: all 200ms ease-in;
-  -moz-transition: all 200ms ease-in;
-  transition: all 200ms ease-in;
-}
 @media only screen and (max-width: 766px) {
   .mobile-toggle {
     display: block;
   }
 }
-.mobile-toggle span {
-  width: 30px;
-  height: 4px;
-  margin-bottom: 6px;
-  border-radius: 1000px;
-  background: #8f8f8f;
-  display: block;
-}
+
 
 // our main content wrapper, the width scales with font size
 main {
@@ -407,3 +388,4 @@ footer {
 }
 
 
+.
