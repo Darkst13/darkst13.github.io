@@ -36,7 +36,6 @@ $('nav a').click(function(event) {
 });
 
 
-//text
 
 // ——————————————————————————————————————————————————
 // TextScramble
