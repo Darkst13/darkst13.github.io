@@ -1,9 +1,3 @@
-<header>
-  <h3><a href="/">{{ site.title | escape }}</a></h3>
-  <nav>
-    {% include navigation.html navigation=site.data.navigation %}
-  </nav>
-</header>
 
 <link href='https://fonts.googleapis.com/css?family=Montserrat|Cardo' rel='stylesheet' type='text/css'>
 <link href='style.css' rel='stylesheet' type='text/css'>
@@ -12,7 +6,7 @@
 <header class="main_h">
 
   <div class="row">
-      <a class="logo" href="#">P/F</a>
+      <a class="logo" href="/">{{ site.title | escape }}</a>
 
       <div class="mobile-toggle">
           <span></span>
@@ -21,12 +15,7 @@
       </div>
 
       <nav>
-          <ul>
-              <li><a href=".sec01">Section 01</a></li>
-              <li><a href=".sec02">Section 02</a></li>
-              <li><a href=".sec03">Section 03</a></li>
-              <li><a href=".sec04">Section 04</a></li>
-          </ul>
+        {% include navigation.html navigation=site.data.navigation %}
       </nav>
 
   </div> <!-- / row -->
