@@ -29,7 +29,7 @@ body {
 
 
 main a {
-  color: white;
+  color: #005555;
   display: inline-block;
   transition-duration: 0.3s;
   transition-property: transform;
@@ -38,7 +38,7 @@ main a {
   
   &:hover {
     transform: translateY(-3px);
-    color: lighten(#03c, 15%);
+    color: lighten(#069A8E, 15%);
   }
 }
 
@@ -67,33 +67,6 @@ main a {
 		}
 	}
 }
-
-.navigation, footer a {
-	display: inline-block;
-	position: relative;
-	color: white;
-	text-decoration: none;
-	&::after {
-		content: '';
-		position: absolute;
-		width: 100%;
-		transform: scaleX(0);
-		border-radius: 5px;
-		height: 0.05em;
-		bottom: 0;
-		left: 0;
-		background: currentcolor;
-		transform-origin: bottom;
-		transition: transform 0.25s ease-out;
-	}
-	&:hover {
-		&::after {
-			transform: scaleX(1);
-			transform-origin: bottom;
-		}
-	}
-}
-
 
 
 .hero h1{
