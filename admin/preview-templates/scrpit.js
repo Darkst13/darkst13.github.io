@@ -8,18 +8,9 @@ $(window).scroll(function() {
     }
 });
 
-$('.logo').on('click', function(e) {
-    e.preventDefault();
-    $('.nav-toggle').removeClass('open');
-    $('.menu-left').removeClass('collapse');
-    $('html, body').animate({
-      scrollTop: 0
-    }, 750, 'easeInOutQuad')
-  });
-
   $(function() {
-    $('.mouse').on('click', function(e) {
-      e.preventDefault();
-      $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+    $('.scroll-down').click (function() {
+      $('html, body').animate({scrollTop: $('section.ok').offset().top }, 'slow');
+      return false;
     });
   });
