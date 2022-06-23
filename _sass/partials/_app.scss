@@ -329,9 +329,9 @@ html[data-current="contact"] main > form {
 footer {
   grid-column: full;
   box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.75);
-  border-top-left-radius: 40px;
   border-color: transparent;
   bottom: 0%;
+  height: 20px;
   text-align: center;
   display: grid;
   grid-template-columns:
