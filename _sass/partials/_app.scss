@@ -349,27 +349,6 @@ footer {
 
 
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);
- body {
-	 background-color: #3c3c3c;
-	 padding: 50px 0;
-	 font-family: 'Noto Sans', sans-serif;
-	 text-align: center;
-}
- .container {
-	 background-color: #222;
-	 margin: 0 auto;
-	 width: 100%;
-	 max-width: 320px;
-	 min-height: 568px;
-	 margin: 0 auto;
-	 border-radius: 8px;
-	 position: relative;
-	 overflow: hidden;
-	 -webkit-box-shadow: 0px 9px 13px 0px rgba(0, 0, 0, 0.3);
-	 -moz-box-shadow: 0px 9px 13px 0px rgba(0, 0, 0, 0.3);
-	 box-shadow: 0px 9px 13px 0px rgba(0, 0, 0, 0.3);
-	 -webkit-transform: scale(1);
-}
  .menu-trigger, .close-trigger {
 	 position: absolute;
 	 top: 32px;
