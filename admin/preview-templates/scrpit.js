@@ -8,9 +8,9 @@ $(window).scroll(function() {
     }
 });
 
-  $(function() {
-    $('.arrow').click (function() {
-      $('html, body').animate({scrollTop: $('section.ok').offset().top }, 'slow');
-      return false;
-    });
+$(function() {
+  $('.scroll-down').click (function() {
+    $('html, body').animate({scrollTop: $('section.ok').offset().top }, 'slow');
+    return false;
   });
+});
