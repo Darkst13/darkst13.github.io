@@ -16,3 +16,10 @@ $('.logo').on('click', function(e) {
       scrollTop: 0
     }, 750, 'easeInOutQuad')
   });
+
+  $(function() {
+    $('.mouse').on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+    });
+  });
