@@ -110,27 +110,6 @@ nav {
   }
 }
 
-.logo {
-  height: 75px;
-  float: left;
-  &:before, &:after {
-    position: absolute;
-    font-size: 7em;
-    font-weight: 300;
-    line-height: 0;
-    color: #fff;
-    top: 25px;
-  }
-  &:before {
-    content: '\00BB';
-    left: 20px;
-  }
-  &:after {
-    content: '\00AB';
-    left: 34px;
-  }
-}
-
 section {
   width: 100%;
   margin: 25px auto;
