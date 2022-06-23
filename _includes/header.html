@@ -1,37 +1,7 @@
-<nav>
-  <h3><a href="/">{{ site.title | escape }}</a></h3>
-  {% include navigation.html navigation=site.data.navigation %}
-</nav>
 <header>
-  <div class="headline">
-    <div class="inner">
-      <h1>DARK</h1>
-    </div>
-  </div>
+  <nav>
+    <h3 class="logo"><a href="/">{{ site.title | escape }}</a></h3>
+    {% include navigation.html navigation=site.data.navigation %}
+  </nav>
+
 </header>
-<section>
-
-  <script>
-    var $headline = $('.headline'),
-    $inner = $('.inner'),
-    $nav = $('nav'),
-    navHeight = 75;
-
-$(window).scroll(function() {
-  var scrollTop = $(this).scrollTop(),
-      headlineHeight = $headline.outerHeight() - navHeight,
-      navOffset = $nav.offset().top;
-
-  $headline.css({
-    'opacity': (1 - scrollTop / headlineHeight)
-  });
-  $inner.children().css({
-    'transform': 'translateY('+ scrollTop * 0.4 +'px)'
-  });
-  if (navOffset > headlineHeight) {
-    $nav.addClass('scrolled');
-  } else {
-    $nav.removeClass('scrolled');
-  }
-});
-  </script>

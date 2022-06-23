@@ -40,102 +40,70 @@ body > * {
 
 
 header {
-  background: #111;
+  grid-column: full;
+  font-size: 1.2rem;
+  background: url("https://styles.redditmedia.com/t5_2qmjl/styles/bannerBackgroundImage_2qok6gpoiud71.png?width=4000&s=6b7f7b1846d648c37b4c12393a8ba2fe067300ca") no-repeat scroll center center / cover;
+  box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.75);
+  border-radius: 0 0 0 40px;
+  border-color: transparent;
+  display: grid;
+  background-color: $brand-color;
+  padding: 1.5rem;
+  @media screen and (min-width: $screen-sm-min) {
+    grid-template-columns: 1fr auto;
+    grid-column-gap: 1rem;
+    border-radius: 0px 0px 30px 30px;
 }
-
-.headline {
-  position: relative;
-  height: 400px;
-  color: #fff;
-  text-align: center;
-  background: url('https://farm9.staticflickr.com/8088/8363737128_b76782c7a2_b.jpg') no-repeat center center;
-  background-size: cover;
-  &:after {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(#111, 0.5);
-  }
 }
-
-.inner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  opacity: 0;
-  z-index: 10;
-  transform: translateX(-50%) translateY(-50%);
-  animation: fade-in 0.75s 0.25s ease-in forwards;
-  h1 {
-    margin: 0;
-    font-size: 4em;
-    line-height: 1.2em;
-  }
-  p {
-    margin: 0;
-    font-size: 1.4em;
-    font-style: italic;
-    font-family: serif;
-  }
+header.nav, header.lu, header.li{
+  font-family: 'Reem Kufi', sans-serif;
 }
+// logo, is a grid item
+header > h1 {
+  display: inline-block;
+  padding-bottom: 1rem;
+  @media screen and (min-width: $screen-sm-min) {
+    padding-bottom: 0;
 
-nav {
-  position: fixed;
-  width: 100%;
-  z-index: 10;
-  &.scrolled {
-    background: rgba(#111, 0.9);
+    }  
+  }
+  @media (max-width: 900px) {
+    align-self: center;
+    text-align: center;
+    font-size: x-large;
+  }
+
+
+// main menu, is a grid item
+header > nav {
+  @media screen and (min-width: $screen-sm-min) {
+    float: right;
   }
   ul {
-    float: right;
-    list-style: none;
-    padding: 25px;
-    margin: 0;
-  }
-  li {
-    float: left;
-  }
-  a {
-    font-size: 0.9em;
-    color: #fff;
-    text-decoration: none;
-    margin: 5px 0 0 20px;
-    display: block;
-    &:hover {
-      color: darken(#fff, 7%);
+    // flexbox is better than grid for distributing an unknown qty of children
+    display: flex;
+    li {
+      margin-right: 2rem;
+      display: inline-block;
+      @media screen and (min-width: $screen-sm-min) {
+        margin-right: 0;
+      }
+      a {
+        color: white !important;
+        border: 0;
+        @media screen and (min-width: $screen-sm-min) {
+          padding: 1rem;
+        }
+        &[data-current="current page"] {
+          // you can add an active nav item style here
+        }
+      }
+      a:hover {
+        color: rgb(233, 233, 233) !important;
+      }
     }
   }
 }
-
-section {
-  width: 100%;
-  margin: 25px auto;
-  padding: 20px;
-  max-width: 800px;
-  font-size: 1.2em;
-  line-height: 1.6em;
-  box-sizing: border-box;
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-header,footer{
-  @media (max-width: 900px) {
-    align-self: stretch;
-  }
-}
-
-// main menu, is a grid item
-
 // our main content wrapper, the width scales with font size
 main {
   width: 100%;
