@@ -7,3 +7,12 @@ $(window).scroll(function() {
         $('.main_h').removeClass('sticky');
     }
 });
+
+$('.logo').on('click', function(e) {
+    e.preventDefault();
+    $('.nav-toggle').removeClass('open');
+    $('.menu-left').removeClass('collapse');
+    $('html, body').animate({
+      scrollTop: 0
+    }, 750, 'easeInOutQuad')
+  });
