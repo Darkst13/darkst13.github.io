@@ -1,9 +1,10 @@
 <header class="herohero image-as-background" style="background-image: url('https://images.unsplash.com/photo-1443890923422-7819ed4101c0?crop=entropy&dpr=2&fit=crop&fm=jpg&h=700&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1300');"></header>>
 
-  <h1>
-    <a href="/" class="dark">{{ site.title | escape }}</a>
-  </h1>
- 
+<div class="hero-container">
+  <p class="animate fadeInLeft delay-400">the lgendary</p>
+  <h1 class="hero-title animate fadeInLeft delay-600"><a href="/">{{ site.title | escape }}</a></h1>
+  <a href="#" class="hero-button animate fadeInLeft delay-800" title="Click to see more">Click Me</a>
+</div> 
   <nav>
     {% include navigation.html navigation=site.data.navigation %}
   </nav>
