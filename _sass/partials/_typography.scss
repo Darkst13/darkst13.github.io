@@ -28,30 +28,19 @@ body {
 }
 
 
-main {
-	a {
-		color: rgba(0,0,0,0.4);
-		font-weight: 700;
-		text-shadow: none;
-		margin: 0 20px;
-		&::before {
-			color: #797878;
-			content: attr(data-hover);
-			position: absolute;
-			-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-			-moz-transition: -moz-transform 0.3s, opacity 0.3s;
-			transition: transform 0.3s, opacity 0.3s;
-		}
-		&:hover{
-			&::before {
-				-webkit-transform: scale(0.9);
-				-moz-transform: scale(0.9);
-				transform: scale(0.9);
-				opacity: 0;
-			}
-		}
-	}
+main a {
+  display: inline-block;
+  transition-duration: 0.3s;
+  transition-property: transform;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  
+  &:hover {
+    transform: translateY(-3px);
+    color: lighten(#03c, 15%);
+  }
 }
+
 
 
 .hero h1{
