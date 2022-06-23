@@ -6,18 +6,43 @@
 
   <div class="row">
       <a class="logo" href="/">{{ site.title | escape }}</a>
-      <input type="checkbox" />
-      <div class="mobile-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-      </div>
-
       <nav>
         {% include navigation.html navigation=site.data.navigation %}
       </nav>
 
   </div> <!-- / row -->
+
+  <span class="menu-trigger">
+    <i class="menu-trigger-bar top"></i>
+    <i class="menu-trigger-bar middle"></i>
+    <i class="menu-trigger-bar bottom"></i>
+  </span>
+  <span class="close-trigger">
+    <i class="close-trigger-bar left"></i>
+    <i class="close-trigger-bar right"></i>
+  </span>
+  <div class="inner-container">
+      <i class="menu-bg top"></i>
+      <i class="menu-bg middle"></i>
+      <i class="menu-bg bottom"></i>
+    <div class="menu-container">
+      <ul class="menu">
+        <li>
+          <a href="#">Login</a>
+        </li>
+        <li>
+          <a href="#">Create account</a>
+        </li>
+        <li>
+          <a href="#">Support</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 </header>
 
 <div class="hero">
