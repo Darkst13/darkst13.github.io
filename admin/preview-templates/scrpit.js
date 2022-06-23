@@ -8,29 +8,24 @@ $(window).scroll(function() {
     }
 });
 
-// Mobile Navigation
-$('.mobile-toggle').click(function() {
-    if ($('.main_h').hasClass('open-nav')) {
-        $('.main_h').removeClass('open-nav');
-    } else {
-        $('.main_h').addClass('open-nav');
-    }
-});
-
-$('.main_h li a').click(function() {
-    if ($('.main_h').hasClass('open-nav')) {
-        $('.navigation').removeClass('open-nav');
-        $('.main_h').removeClass('open-nav');
-    }
-});
-
-// navigation scroll lijepo radi materem
-$('nav a').click(function(event) {
-    var id = $(this).attr("href");
-    var offset = 70;
-    var target = $(id).offset().top - offset;
-    $('html, body').animate({
-        scrollTop: target
-    }, 500);
-    event.preventDefault();
-});
+(function($) {
+    $(function() {
+      // Store menu container
+      var mobileMenu = '#mobile-menu';
+      // Store Trigger
+      var mobileBtn = '#mobile-footer-btn';
+  
+      var rotation = '.mobile-btn-close';
+  
+      $(mobileBtn).on("click", function(e) {
+        e.stopPropagation();
+        if ($(mobileMenu).hasClass('mobile-menu-hide') || $(rotation).hasClass('is-rotating')) {
+          $(mobileMenu).removeClass("mobile-menu-hide").addClass("mobile-menu-show");
+          $(rotation).removeClass("is-rotating").addClass("is-rotating-back");
+        } else {
+          $(mobileMenu).removeClass("mobile-menu-show").addClass("mobile-menu-hide");
+          $(rotation).removeClass('is-rotating-back').addClass('is-rotating');
+        }
+      });
+    });
+  })(jQuery);
