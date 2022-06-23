@@ -168,6 +168,7 @@ main {
   font-family: "Montserrat", sans-serif;
 }
 .hero h1 {
+  user-select: none;
   font-size: 50px;
   line-height: 1.3;
 }
