@@ -131,6 +131,10 @@ nav ul a {
   font-size: 20px;
 }
 
+.navigation{
+  color: #fff;
+}
+
 
 // our main content wrapper, the width scales with font size
 main {
@@ -180,11 +184,9 @@ main {
   transform: translate(-50%,-50%);
   @media  screen and (max-width: 766px) {
     position: relative;
-    top: 10%;
-    left: 100%;
-    transform: translate(-50%, -50%);
-    margin: 50%;
-}  }
+    left: 50%;
+  }
+}
 .arrow span{
   display: block;
   width: 30px;
