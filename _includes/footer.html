@@ -1,27 +1,13 @@
-<footer>
+<footer class="pc-nav">
     <small> Let the <a href="/contact">DARK</a> take over!</small>
 </footer>
-<nav class="navbar" role="navigation">
-    <img src="https://s3.amazonaws.com/plloyd/codepen/animated-menu-logo.svg" />
-  </nav>
-  
-  <div id="content">
-    <h1>Animated Mobile Footer Menu</h1>
-    <h3>Shrink the browser window to see</h3>
-  </div>
-  
-  <footer id="mobile-footer">
+
+<footer id="mobile-footer">
     <div id="mobile-menu">
       <div id="mobile-footer-container">
-        <div class="mobile-link">
-          <a href="#" class="text-center">My Account</a>
-        </div>
-        <div class="mobile-link">
-          <a href="#" class="text-center">Reviews</a>
-        </div>
-        <div class="mobile-link">
-          <a href="#" class="text-center">Contact Us</a>
-        </div>
+        <nav class="mobile-link">
+            {% include navigation.html navigation=site.data.navigation %}
+        </nav>
       </div>
     </div>
     <div id="mobile-footer-close">
