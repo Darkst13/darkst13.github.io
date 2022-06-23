@@ -4,7 +4,7 @@
 // CSS Grid is used for the layout with fallbacks for less capable browsers
 // declared beforehand, and a @supports feature query to reset fallbacks when
 // necessary. https://rachelandrew.co.uk/css/cheatsheets/grid-fallbacks
-
+@import url(header.scss);
 // the body element is our primary layout grid
 body {
   background-color: $backgrund-color;

@@ -27,7 +27,7 @@ body {
   font-size: 1.8rem; // this is equivalent to 16px
 }
 
-.nav{
+main a{
   font-family: $subfont;
   text-decoration: none;
   display: initial;
@@ -46,19 +46,7 @@ body {
   }
 }
 
-a:hover span {
-  animation: glitchText 0.4s linear;
-}
 
-a::before {
-  height: 2px;
-  opacity: 0;
-}
-
-a:hover::before {
-  opacity: 1;
-  animation: glitchLine 0.4s steps(2, start) forwards;
-}
 a.dark{
   font-family: 'Rubik Glitch', cursive;
   color: black !important;
