@@ -111,6 +111,7 @@ nav ul {
   text-align: right;
   float: right;
   margin-top: auto;
+  width: max-content;
 }
 @media only screen and (max-width: 766px) {
   nav ul {
@@ -187,7 +188,7 @@ main {
   width: 26px;
   height: 46px;
   border-radius: 13px;
-  border: 2px solid #e8f380;
+  border: 2px solid #ffffff;
   position: absolute;
   bottom: 40px;
   position: absolute;
@@ -392,6 +393,7 @@ footer {
   display: contents;
   width: auto;
   text-align: center;
+  float: none;
   @media screen and (min-width:$screen-sm-min) {
     display: none;
   }
