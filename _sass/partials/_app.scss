@@ -91,6 +91,7 @@ body > * {
 @media only screen and (max-width: 766px) {
   .logo {
     float: none;
+    width: fit-content;
   }
 }
 
@@ -187,7 +188,7 @@ main {
   text-align: center;
   color: #fff;
   padding-top: 110px;
-  min-height: 530px;
+  min-height: 665px;
   letter-spacing: 2px;
   font-family: "Montserrat", sans-serif;
 }
