@@ -182,8 +182,9 @@ main {
   left: 50%;
   transform: translate(-50%,-50%);
   @media  screen and (max-width: 766px) {
-    position: fixed;
+    position: relative;
     margin-top: 10%;
+    margin-left: 33%;
   }
 }
 .arrow span{
