@@ -53,7 +53,7 @@ body > * {
   opacity: 0;
   top: -100px;
   padding-bottom: 6px;
-  font-family: 'Harmattan', sans-serif;
+  font-family: $bold-font;
 }
 @media only screen and (max-width: 766px) {
   .main_h {
@@ -70,7 +70,7 @@ body > * {
 }
 
 .logo {
-  font-family: 'Rubik Glitch', cursive;
+  font-family: $logo-font;
   font-size: 40px;
   color: black;
   text-transform: uppercase;
@@ -99,7 +99,7 @@ nav {
 }
 nav ul {
   list-style: none;
-  font-family: 'Noto Sans Arabic';
+  font-family: $subfont;
   overflow: hidden;
   text-align: right;
   float: right;
@@ -161,7 +161,7 @@ main {
   padding-top: 110px;
   min-height: 665px;
   letter-spacing: 2px;
-  font-family: "Montserrat", sans-serif;
+  font-family: $hero-font;
 }
 .hero h1 {
   user-select: none;

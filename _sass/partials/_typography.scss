@@ -43,7 +43,7 @@ main a {
 }
 
 .logo {
-  color: #30475E;
+  color: $logo-color;
   display: inline-block;
   transition-duration: 0.3s;
   transition-property: transform;
@@ -52,14 +52,14 @@ main a {
   
   &:hover {
     transform: translateY(-3px);
-    color: lighten(#069A8E, 15%);
+    color: lighten($logo-hover-color, 15%);
   }
 }
 
 .navigation, footer a {
 	display: inline-block;
 	position: relative;
-	color: white;
+	color: $navigation-color;
 	text-decoration: none;
 	&::after {
 		content: '';
@@ -84,7 +84,7 @@ main a {
 
 
 .hero h1{
-  color:white;
+  color:$hero-h1;
   font-size:100px;
   position:relative;
   width:400px;

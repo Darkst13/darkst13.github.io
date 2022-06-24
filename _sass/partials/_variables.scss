@@ -2,19 +2,24 @@
 // site colours
 $backgrund-color: #0e0e15;
 $text-color: rgb(221, 217, 217);
-$text-color-negative: rgb(255, 0, 0);
+$text-color-negative: rgb(180, 180, 180);
 $brand-color: #0b0b11;
 $link-color: #646FD4;
 $link-hover-color: #242F9B;
-$link-visited: #2E0249;
 $grey-bg-color: #151523;
-$hairline-color: rgb(230,230,230);
+$hairline-color: white;
 $selection-bg-color: #009494;
-
+$logo-color: #30475E; 
+$logo-hover-color: #069A8E;
+$navigation-color: white;
+$hero-h1: white;
 
 // typographic defaults
 $base-font: 'Lateef', cursive;
 $subfont:  'Noto Sans Arabic', sans-serif;
+$bold-font: 'Harmattan', sans-serif;
+$hero-font: "Montserrat", sans-serif;
+$logo-font: 'Rubik Glitch', cursive;
 $code-font: Courier, monospace;
 $base-font-size: 80.5%;
 $base-font-weight: 300;
