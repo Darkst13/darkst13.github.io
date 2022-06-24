@@ -39,7 +39,7 @@ var randomImages = (function(){
       // math random
       var r = images[Math.floor(Math.random() * images.length)];
       // add into style
-      s.textContent = '#rand-images{background:url('+r+') no-repeat center center fixed #eee;background-size:cover;-moz-background-size:cover;}';
+      s.textContent = '#rand-images{background-image:url('+r+') no-repeat center center fixed #eee;background-size:cover;-moz-background-size:cover;}';
     }
   };
 })();
