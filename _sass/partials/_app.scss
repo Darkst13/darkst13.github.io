@@ -133,7 +133,13 @@ nav ul a {
 
 .in-post-nav{
   float: initial;
-  width: fit-content;
+  width: -webkit-fill-available;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: baseline;
+  align-content: space-between;
 }
 
 
